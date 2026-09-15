@@ -17,7 +17,8 @@
             background: #0b0b0f;
             color: white;
         }
- nav {
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -74,15 +75,16 @@
             text-align: center;
         }
 
-        .services h2 {
-    font-size: 42px;
-    margin-bottom: 45px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #ffffff, #8b5cf6);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-    letter-spacing: 1px;
-}
+        .services h2,
+        .portfolio h2 {
+            font-size: 42px;
+            margin-bottom: 45px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ffffff, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
 
         .cards {
             display: flex;
@@ -93,34 +95,68 @@
         }
 
         .card {
-    background: linear-gradient(145deg, #1b1b27, #111118);
-    padding: 35px;
-    width: 280px;
-    border-radius: 20px;
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    transition: 0.3s ease;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-}
-.card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(139, 92, 246, 0.7);
-    box-shadow: 0 20px 45px rgba(139, 92, 246, 0.25);
-}
+            background: linear-gradient(145deg, #1b1b27, #111118);
+            padding: 35px;
+            width: 280px;
+            border-radius: 20px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+        }
 
-         .card h3 {
-    margin-bottom: 25px;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-    color: #8b5cf6;
-}
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(139, 92, 246, 0.7);
+            box-shadow: 0 20px 45px rgba(139, 92, 246, 0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 25px;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            color: #8b5cf6;
+        }
 
         .card p {
-    color: #d1d1dc;
-    line-height: 1.7;
-    font-size: 16px;
-    margin: 0;
-}
+            color: #d1d1dc;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .portfolio {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .portfolio-card {
+            background: #16161f;
+            padding: 35px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .portfolio-card video {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 25px;
+            display: block;
+            border: 3px solid #8b5cf6;
+            margin-top: 25px;
+        }
+
+        .portfolio-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-card p {
+            color: #bbbbc5;
+        }
+
         .contact {
             text-align: center;
             padding: 80px 20px;
@@ -141,95 +177,30 @@
             padding: 25px;
             color: #888;
         }
-        .portfolio {
-    padding: 70px 8%;
-    text-align: center;
-}
 
-.portfolio h2 {
-    font-size: 42px;
-    margin-bottom: 45px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #ffffff, #8b5cf6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 1px;
-}
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 38px;
+            }
 
- .portfolio-card {
-    background: #16161f;
-    padding: 35px;
-    max-width: 700px;
-    margin: auto;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
 
-.portfolio-card video {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 25px;
-    display: block;
-    border: 3px solid #8b5cf6;
-}
+            .card {
+                width: 90%;
+            }
 
-.portfolio-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
+            .portfolio-card video {
+                width: 100%;
+                height: auto;
+            }
 
-.portfolio-card p {
-    color: #bbbbc5;
-}
-
-
-   
-
-.portfolio-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.portfolio-card p {
-    color: #bbbbc5;
-}
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-    width: 90%;
-    background: linear-gradient(145deg, #1b1b27, #12121a);
-    padding: 35px;
-    border-radius: 15px;
-    border: 1px solid rgba(139, 92, 246, 0.6);
-    transition: 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-15px);
-    border-color: rgba(139, 92, 246, 0.8);
-    box-shadow: 0 20px 45px rgba(139, 92, 246, 0.35);
-}
-
-
-    .portfolio-card video {
-    width: 100%;
-    border-radius: 15px;
-}
-
-    nav {
-        padding: 20px 5%;
-    }
-
-}
+            nav {
+                padding: 20px 5%;
+            }
+        }
     </style>
 </head>
 
@@ -256,6 +227,7 @@
     </section>
 
     <section class="services" id="services">
+
         <h2>My Services</h2>
 
         <div class="cards">
@@ -269,12 +241,12 @@
             </div>
 
             <div class="card">
-    <h3>Shorts & Reels</h3>
-    <p>
-        Fast-paced and engaging short-form videos
-        for Instagram Reels, TikTok and YouTube Shorts.
-    </p>
-</div>
+                <h3>Shorts & Reels</h3>
+                <p>
+                    Fast-paced and engaging short-form videos
+                    for Instagram Reels, TikTok and YouTube Shorts.
+                </p>
+            </div>
 
             <div class="card">
                 <h3>Social Media Videos</h3>
@@ -286,29 +258,39 @@
 
         </div>
     </section>
-<section class="portfolio">
 
-    <h2>My Work</h2>
+    <section class="portfolio">
 
-    <div class="portfolio-card">
+        <h2>My Work</h2>
 
-        <h3>My Video Editing Project</h3>
+        <div class="portfolio-card">
 
-        <p>Creative video editing with smooth cuts and engaging visuals.</p>
+            <h3>My Video Editing Project</h3>
 
-        <video controls>
-    <source src="WhatsApp Video 2026-08-26 at 7.49.43 AM.mp4" type="video/mp4">
-</video>
-            
-    </div>
+            <p>
+                Creative video editing with smooth cuts and engaging visuals.
+            </p>
 
-</section>
+            <video controls>
+                <source src="WhatsApp Video 2026-08-26 at 7.49.43 AM.mp4" type="video/mp4">
+            </video>
+
+        </div>
+    </section>
+
     <section class="contact" id="contact">
+
         <h2>Let's Work Together</h2>
 
-        <p>Have a video project? Let's bring your idea to life.</p>
+        <p>
+            Have a video project? Let's bring your idea to life.
+        </p>
 
-<a href="https://wa.me/923322381861" class="btn">Contact Me</a>    </section>
+        <a href="https://wa.me/923322381861" class="btn">
+            Contact Me
+        </a>
+
+    </section>
 
     <footer>
         © 2026 EDITPRO. All rights reserved.
