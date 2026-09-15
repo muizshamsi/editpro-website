@@ -1,13 +1,14 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="EDITPRO provides professional video editing services for YouTube, TikTok, Instagram Reels and social media.">
+    <meta name="description"
+        content="EDITPRO provides professional video editing services for YouTube, Instagram, TikTok and social media.">
 
-    <title>EDITPRO | Professional Video Editing Services</title>
+    <title>EDITPRO | Professional Video Editing</title>
 
     <style>
         * {
@@ -22,7 +23,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #09090d;
+            background: #0b0b12;
             color: #ffffff;
             line-height: 1.6;
         }
@@ -33,158 +34,131 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 22px 8%;
-            background: rgba(13, 13, 20, 0.95);
-            border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+            padding: 20px 8%;
+            background: #10101a;
             position: sticky;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
         }
 
         .logo {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: #8b5cf6;
-        }
-
-        nav a {
             color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            color: #c8c8d2;
             text-decoration: none;
-            margin-left: 28px;
             font-size: 15px;
-            font-weight: 600;
             transition: 0.3s;
         }
 
-        nav a:hover {
+        nav ul li a:hover {
             color: #8b5cf6;
         }
 
         /* HERO */
 
         .hero {
-            min-height: 650px;
+            min-height: 90vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 100px 20px;
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.20), transparent 35%);
+            padding: 80px 8%;
         }
 
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 8px 16px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            border-radius: 50px;
-            color: #c4b5fd;
-            background: rgba(139, 92, 246, 0.08);
-            font-size: 14px;
-            font-weight: 600;
+        .hero-tag {
+            color: #a78bfa;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 7vw, 72px);
-            line-height: 1.05;
+            font-size: 56px;
+            max-width: 850px;
+            line-height: 1.1;
             margin-bottom: 25px;
-            font-weight: 800;
-            letter-spacing: -2px;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(90deg, #8b5cf6, #c4b5fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
-            font-size: 19px;
-            color: #a9a9b6;
             max-width: 700px;
-            margin: auto;
-            line-height: 1.7;
+            color: #b9b9c6;
+            font-size: 18px;
+            margin-bottom: 35px;
         }
 
-        .btn {
+        .hero-btn {
             display: inline-block;
-            margin-top: 32px;
-            padding: 15px 30px;
             background: #8b5cf6;
             color: white;
             text-decoration: none;
-            border-radius: 10px;
+            padding: 14px 25px;
+            border-radius: 8px;
             font-weight: 700;
             transition: 0.3s;
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
         }
 
-        .btn:hover {
-            transform: translateY(-3px);
+        .hero-btn:hover {
             background: #7c3aed;
-            box-shadow: 0 15px 35px rgba(139, 92, 246, 0.35);
+            transform: translateY(-2px);
         }
 
-        /* SECTION TITLES */
+        /* COMMON SECTION */
+
+        section {
+            padding: 80px 8%;
+        }
 
         .section-title {
             text-align: center;
             margin-bottom: 50px;
         }
 
-        .section-title h2 {
+        .section-title h2,
+        .portfolio h2,
+        .contact h2 {
             font-size: 42px;
-            margin-bottom: 12px;
-            font-weight: 800;
-            background: linear-gradient(90deg, #ffffff, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
         }
 
-        .section-title p {
-            color: #9999a8;
+        .section-title p,
+        .portfolio > p {
+            color: #a9a9b5;
         }
 
         /* SERVICES */
 
         .services {
-            padding: 90px 8%;
+            background: #10101a;
         }
 
         .cards {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            flex-wrap: wrap;
         }
 
         .card {
-            background: linear-gradient(145deg, #191923, #101017);
-            padding: 35px;
-            width: 300px;
-            min-height: 230px;
-            border-radius: 18px;
-            border: 1px solid rgba(139, 92, 246, 0.18);
-            transition: 0.3s ease;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            background: #16161f;
+            padding: 30px;
+            border: 1px solid #252532;
+            border-radius: 14px;
+            transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(139, 92, 246, 0.65);
-            box-shadow: 0 20px 45px rgba(139, 92, 246, 0.15);
+            transform: translateY(-5px);
+            border-color: #8b5cf6;
         }
 
         .card-icon {
@@ -193,15 +167,13 @@
         }
 
         .card h3 {
-            margin-bottom: 14px;
-            font-size: 23px;
-            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 22px;
         }
 
         .card p {
-            color: #aeadba;
-            font-size: 15px;
-            line-height: 1.7;
+            color: #bbbbc5;
+            line-height: 1.5;
         }
 
         .card ul {
@@ -236,38 +208,30 @@
             color: #ffffff;
             transform: translateX(4px);
         }
-.contact-note {
-    margin-top: 18px;
-    color: #9d9daa;
-    font-size: 14px;
-}
+
         /* ABOUT */
 
         .about {
-            padding: 90px 8%;
-            background: #0b0b10;
+            text-align: center;
         }
 
         .about-card {
-            max-width: 850px;
+            max-width: 800px;
             margin: auto;
+            background: #16161f;
+            border: 1px solid #252532;
+            border-radius: 14px;
             padding: 35px;
-            background: linear-gradient(145deg, #181821, #101017);
-            border-radius: 22px;
-            border: 1px solid rgba(139, 92, 246, 0.18);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
         }
 
         .about-card h3 {
-            font-size: 26px;
-            margin-bottom: 15px;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
 
         .about-card p {
-            color: #a9a9b6;
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 15px;
+            color: #bbbbc5;
+            margin-bottom: 18px;
         }
 
         .about-card p:last-child {
@@ -277,67 +241,91 @@
         /* PORTFOLIO */
 
         .portfolio {
-            padding: 90px 8%;
-            background: #0d0d13;
+            background: #10101a;
+            text-align: center;
         }
 
         .portfolio-card {
-            background: linear-gradient(145deg, #181821, #101017);
-            padding: 35px;
             max-width: 850px;
-            margin: auto;
-            border-radius: 22px;
-            border: 1px solid rgba(139, 92, 246, 0.18);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+            margin: 40px auto 0;
+            background: #16161f;
+            padding: 30px;
+            border: 1px solid #252532;
+            border-radius: 14px;
+            text-align: left;
         }
 
         .portfolio-card h3 {
             font-size: 25px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .portfolio-card p {
-            color: #a9a9b6;
-            margin-bottom: 20px;
+            color: #bbbbc5;
         }
 
         .portfolio-card video {
             width: 100%;
-            max-height: 480px;
-            border-radius: 14px;
             display: block;
-            border: 2px solid rgba(139, 92, 246, 0.5);
-            background: #000;
+            border-radius: 14px;
+            margin-top: 20px;
+        }
+
+        .portfolio-card h4 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .portfolio-card .work-highlights {
+            margin-top: 5px;
+        }
+
+        .portfolio-card .work-highlights p {
+            color: #b9b9c6;
+            font-size: 14px;
         }
 
         /* CONTACT */
 
         .contact {
             text-align: center;
-            padding: 100px 20px;
-            background:
-                radial-gradient(circle at center, rgba(139, 92, 246, 0.13), transparent 45%),
-                #0b0b10;
         }
 
-        .contact h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
+        .contact > p {
+            color: #b9b9c6;
+            margin-bottom: 30px;
         }
 
-        .contact p {
-            color: #aaaab7;
-            font-size: 17px;
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25d366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-note {
+            margin-top: 18px;
+            color: #9d9daa;
+            font-size: 14px;
         }
 
         /* FOOTER */
 
         footer {
+            background: #10101a;
             text-align: center;
-            padding: 28px 20px;
-            color: #666673;
+            padding: 25px;
+            color: #777784;
             font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         /* MOBILE */
@@ -348,47 +336,44 @@
                 padding: 18px 5%;
             }
 
-            .logo {
-                font-size: 22px;
+            nav ul {
+                gap: 14px;
             }
 
-            nav a {
-                margin-left: 14px;
+            nav ul li a {
                 font-size: 13px;
             }
 
             .hero {
-                min-height: 580px;
-                padding: 80px 20px;
+                min-height: 80vh;
+                padding: 60px 5%;
             }
 
             .hero h1 {
-                letter-spacing: -1px;
+                font-size: 40px;
             }
 
             .hero p {
                 font-size: 16px;
             }
 
-            .services,
-            .about,
-            .portfolio {
-                padding: 70px 5%;
+            section {
+                padding: 60px 5%;
             }
 
             .section-title h2,
+            .portfolio h2,
             .contact h2 {
                 font-size: 34px;
             }
 
-            .card {
-                width: 100%;
-                max-width: 380px;
+            .cards {
+                grid-template-columns: 1fr;
             }
 
             .about-card,
             .portfolio-card {
-                padding: 20px;
+                padding: 25px;
             }
         }
     </style>
@@ -396,53 +381,53 @@
 
 <body>
 
-    <nav>
-        <div class="logo">EDIT<span>PRO</span></div>
+    <!-- NAVBAR -->
 
-        <div>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Work</a>
-            <a href="#contact">Contact</a>
-        </div>
+    <nav>
+        <div class="logo">EDITPRO</div>
+
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <section class="hero">
 
-        <div class="hero-content">
+    <!-- HERO -->
 
-            <div class="hero-badge">
-                🎬 Professional Video Editing
-            </div>
+    <section class="hero" id="home">
 
-            <h1>
-                Turn Your Videos Into
-                <span>Something Amazing</span>
-            </h1>
+        <div class="hero-tag">🎬 Professional Video Editing</div>
 
-            <p>
-                I transform raw footage into engaging, high-quality videos
-                designed for YouTube, Instagram, TikTok and social media.
-            </p>
+        <h1>Turn Your Videos Into Something Amazing</h1>
 
-            <a href="#contact" class="btn">
-                Let's Work Together →
-            </a>
+        <p>
+            I transform raw footage into engaging, high-quality videos
+            designed for YouTube, Instagram, TikTok and social media.
+        </p>
 
-        </div>
+        <a href="#contact" class="hero-btn">
+            Let's Work Together →
+        </a>
 
     </section>
+
+
+    <!-- SERVICES -->
 
     <section class="services" id="services">
 
         <div class="section-title">
-            <h2>What I Do</h2>
-            <p>Professional editing made for modern content creators.</p>
+            <h2>My Services</h2>
+            <p>Professional editing for different types of content.</p>
         </div>
 
         <div class="cards">
 
             <div class="card">
+
                 <div class="card-icon">🎥</div>
 
                 <h3>YouTube Editing</h3>
@@ -458,11 +443,15 @@
                     <li>Text & visual effects</li>
                 </ul>
 
-                <a href="#contact" class="card-btn">Get Started →</a>
+                <a href="#contact" class="card-btn">
+                    Get Started →
+                </a>
+
             </div>
 
 
             <div class="card">
+
                 <div class="card-icon">⚡</div>
 
                 <h3>Shorts & Reels</h3>
@@ -478,11 +467,15 @@
                     <li>Vertical video format</li>
                 </ul>
 
-                <a href="#contact" class="card-btn">Get Started →</a>
+                <a href="#contact" class="card-btn">
+                    Get Started →
+                </a>
+
             </div>
 
 
             <div class="card">
+
                 <div class="card-icon">📱</div>
 
                 <h3>Social Media Videos</h3>
@@ -498,18 +491,27 @@
                     <li>Engaging visual style</li>
                 </ul>
 
-                <a href="#contact" class="card-btn">Get Started →</a>
+                <a href="#contact" class="card-btn">
+                    Get Started →
+                </a>
+
             </div>
 
         </div>
 
     </section>
 
+
+    <!-- ABOUT -->
+
     <section class="about" id="about">
 
         <div class="section-title">
             <h2>About Me</h2>
-            <p>Passionate about creating engaging video content.</p>
+
+            <p>
+                Passionate about creating engaging video content.
+            </p>
         </div>
 
         <div class="about-card">
@@ -522,40 +524,56 @@
             </p>
 
             <p>
-                My goal is to turn raw footage into content that looks great
-                and keeps viewers engaged.
+                I focus on smooth pacing, clean cuts, engaging visuals and
+                polished edits that help turn raw footage into content people
+                enjoy watching.
             </p>
 
         </div>
 
     </section>
 
+
+    <!-- MY WORK -->
+
     <section class="portfolio" id="portfolio">
 
-        <div class="section-title">
-            <h2>My Work</h2>
-            <p>Here’s a look at my editing style, pacing and attention to detail.</p>
-        </div>
+        <h2>My Work</h2>
+
+        <p>
+            Here’s a look at my editing style, pacing and attention to detail.
+        </p>
 
         <div class="portfolio-card">
 
             <h3>YouTube Video Edit</h3>
 
             <p>
-                  A professionally edited video featuring clean cuts, smooth pacing,
-    engaging visuals and polished transitions..
+                A professionally edited video featuring clean cuts,
+                smooth pacing, engaging visuals and polished transitions.
             </p>
 
             <video controls width="100%">
                 <source src="video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <h4>What I Focused On</h4>
-<p>Clean cuts • Smooth pacing • Engaging visuals • Better audio flow</p>
+
+            <div class="work-highlights">
+
+                <h4>What I Focused On</h4>
+
+                <p>
+                    Clean cuts • Smooth pacing • Engaging visuals • Better audio flow
+                </p>
+
+            </div>
 
         </div>
 
     </section>
+
+
+    <!-- CONTACT -->
 
     <section class="contact" id="contact">
 
@@ -565,17 +583,26 @@
             Let's turn your footage into content people want to watch.
         </p>
 
-        <a href="https://wa.me/923322381861" class="btn">
+        <a
+            href="https://wa.me/923322381861"
+            class="whatsapp-btn"
+            target="_blank">
             Contact Me on WhatsApp
         </a>
-        <p class="contact-note">Fast response • Easy communication • Let's discuss your project</p>
+
+        <p class="contact-note">
+            Fast response • Easy communication • Let's discuss your project
+        </p>
 
     </section>
+
+
+    <!-- FOOTER -->
 
     <footer>
         © 2026 EDITPRO. All rights reserved.
     </footer>
 
 </body>
+
 </html>
-```
